@@ -5,7 +5,7 @@ async function main() {
 
     console.log("Deploying with account:", deployer.address);
 
-    const MyToken = await hre.ethers.getContractFactory("MyToken");
+    const MyToken = await hre.ethers.getContractFactory("NFT");
 
     const myToken = await MyToken.deploy(deployer.address);
 

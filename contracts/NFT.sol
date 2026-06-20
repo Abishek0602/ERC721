@@ -7,7 +7,7 @@ import {ERC721Burnable} from "@openzeppelin/contracts/token/ERC721/extensions/ER
 import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import {ERC2981} from "@openzeppelin/contracts/token/common/ERC2981.sol";
 
-contract MyToken is ERC721, ERC721Burnable, ERC2981, Ownable, ReentrancyGuard {
+contract NFT is ERC721, ERC721Burnable, ERC2981, Ownable, ReentrancyGuard {
 
     uint256 private _nextTokenId;
     uint256 public Token_Price;
@@ -18,7 +18,7 @@ contract MyToken is ERC721, ERC721Burnable, ERC2981, Ownable, ReentrancyGuard {
     mapping(address => uint256) public minted;
 
     constructor(address initialOwner)
-        ERC721("MyToken", "MTK")
+        ERC721("BOTZ", "BZ")
         Ownable(initialOwner)
     {
         _setDefaultRoyalty(initialOwner, 500); // 5% royalty
